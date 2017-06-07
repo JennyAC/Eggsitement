@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+ <html>
+ <head>
+    <title>Eggsitement</title>
+     <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+     <script src="files/galleria/galleria-1.5.6.js"></script>
+     <script type="application/javascript" src="files/raphael.min.js"></script>
+     <link rel="stylesheet" type="text/css" href="files/eggsitement.css">
+     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+     <link href="https://fonts.googleapis.com/css?family=Comfortaa" rel="stylesheet">
+     <style>
+         @import url('https://fonts.googleapis.com/css?family=Comfortaa');
+         @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:200');
+         #galleria{height:350px;}
+     </style>
+     <style type="text/css">
+         .galleria {
+             position: absolute;
+             left: 10px;
+             right: 10px;
+             overflow: hidden;
+             width:70%;
+             height:380px;
+             margin-left:400px;
+         }
+     </style>
+<!--
+     <link href="https://fonts.googleapis.com/css?family=Dosis" rel="stylesheet">
+-->
+ </head>
+ <body>
+     <div id="egg-photos" class="floatleft">
+         <div class="section-image grow"><img src="/images/egg-photos/dipped-orange.png" onclick="showSection('section1-content')"></div>
+         <div class="section-image grow"><img src="/images/egg-photos/parsley.png" onclick="showSection('section2-content')"></div>
+         <div id="section3-egg" class="section-image grow"><img src="/images/egg-photos/wrapping-paper-transp.png" onclick="showSection('section3-content')"></div>
+         <div class="section-image grow"><img src="/images/egg-photos/mosaic.png" onclick="showSection('section4-content')"></div>
+     </div>
+     <div id="leaf-border">
+         <div id="content">
+             <div onclick="showSection('intro')"><img src="images/egg-photos/Europe-sml.png" title="egg history" class="floatleft grow"><h1>Easter Sunday - my favourite day of the year!</h1></div>
+             <div id="intro" class="section">
+                <p>Every year, on Easter Sunday, my family (plus a pile of extras we've 'adopted' over the years) gathers together to decorate eggs. It's a noisy, crazy messy day and I love it!</p>
+                <p>In the beginning, when I was a small child, my brothers and sisters and I would decorate boiled eggs and then eat them. Over the years, though, we all got a bit too good at it, and soon the eggs were getting too good to smash. My parents decided to start blowing the eggs so that we could keep our masterpieces.</p>
+                <p>The collection of eggs - painted, dyed, waxed, mosaiced, drilled and who-knows-what-else - has now grown to well over 1,000 eggs, all of come out to be displayed each year. Somehow though, each year, people still manage to come up with something new!</p>
+             </div>
+             <p class="pinkText">Click on a big egg to gain a bit of insight into our eggstraordinary and eggsciting family tradition.</p>
+            
+        <div id="section1" class="section">
+            <div id="section1-content" class="section-content">
+                <h2>Dying an egg - the simple version</h2>
+                <p>One of the easiest ways to decorate eggs is to dip them in coloured dye, a tradition that still happens in many cultures today. At Greek Easter, boiled eggs are dyed, traditionally with red dye, and then family members bump eggs together to see who has the strongest egg. The last egg standing is the winner.</p>
+                <p>Dyeing gives even the youngest or most unskilled artist a chance to create something beautiful, as colours blend and and change with multiple dips.</p>
+                <h3>Now's your chance to try dying your own egg!</h3>
+                <p>Click on a pot of dye to change the colour of your egg. Once you've dipped, you can dip again or click on the egg to change it back to its original colour.</p>
+                <div id="egg-dye-animation"></div>
+            </div>
+        </div>
+        <div id="section2" class="section">
+            <div id="section2-content" class="section-content">
+                <h2>And then there are the more complex ways to dye...</h2>
+                <p>Initially simple, dyed eggs can get a whole lot more interesting when you start involving other materials!</p>
+                <div id="rubber-bands">
+                <p>Over the years, we've experimented with many different ways to dip eggs. The egg on the left was dyed yellow, then had fresh parsley held on to it with with an old stocking before dipping in green dye. we've also used string, stickers, crayon and wax to give interesting effects when dipped.</p>
+                <p><img src="images/egg-photos/rubber-bands.jpg" class="floatleft"><img src="images/egg-photos/rubber-band-dip.jpg" class="floatleft">This egg was wrapped in rubber bands before being dyed - easy to do, but an effective result. It can be great fun eggsperimenting with different things to block out the dye.</p>
+                </div>
+                <div id="ukrainian">
+                <h3>Ukrainian style!</h3>
+                <p><img src="images/egg-photos/vegemite.jpg" title="Ruth's vegemite egg" class="floatright">This vegemite egg  was decorated using a Ukrainian tool called a <a href="https://en.wikipedia.org/wiki/Pysanka" title="link to Wikipedia article on pysanky">pysanka</a>, a pencil-like handle with a tiny metal funnel which you fill with beeswax. You hold the funnel over a candle to melt the wax then start drawing with it, allowing you to create complex designs (if you are very patient!). First step was to cover the areas that should stay white with wax. The egg was then dipped in yellow dye then more wax was applied to cover everything that should stay yellow. The egg was dipped in red, then more wax again to coverthe red, then more wax and finally black dye.</p>
+                <p>The order of dye-colours you dip is very important, going from lightest (the white of the egg itself) to darkest as the blends overlay and create new colours.</p>
+                <p>The final step is to heat the egg slowly over a candle flame and carefully melt off all the wax.</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="section3" class="section">
+            
+            <!--Force css to reolad to work around bug in Galleria-->
+           <!--<script> $('#section3-egg').click(function () {
+                   'use strict'
+                   css.reload();
+               });
+            </script>-->
+            
+            <div id="section3-content" class="section-content">
+                <h2>Inspiration comes from many places</h2>
+                <p>The egg for this section was painted using gouache paints, the inspiration coming from a piece of wrapping paper.</p>
+                <p>Each year, as Easter approaches, you find yourself looking at the world around you in a very different light!</p>
+                <p class="indent">"That shirt she's wearing, with all those polkadots, that'd make a great egg!"</p>
+                <p class="indent">"Hmm, what an interesting pattern on those curtains, I could totally paint that..."</p>
+                <p>Take a look through the gallery to see some eggsamples - some with the objects that inspired them, while the inspiration for others is obvious!</p>
+                <div id="#galleria-content"><div class="galleria">
+                    <img src="images/egg-photos/blackjap.jpg" title="Inspiration taken from a Japanese laquerware container">
+                    <img src="images/egg-photos/Charlie-shoes.jpg" title="Inspired by the artist's shoes">
+                    <img src="images/egg-photos/courtney-bag.jpg" title="Inspired by the artist's handbag">
+                    <img src="images/egg-photos/egg-painting-rabbit.jpg" title="Inception, easter egg style - an egg with a painting of a rabbit painting an egg">
+                    <img src="images/egg-photos/egg-plant.jpg" title="An eggplant - of course!">
+                    <img src="images/egg-photos/daleggs.jpg" title="The holes in the dalegg were drilled with a dental drill. This was the first time drilling was used as part of the decoration, not just to get the egg contents out.">
+                    <img src="images/egg-photos/car.png" title="My brother always works with the three dimensional shape rather than painting a flat picture around the egg">
+                    <img src="images/egg-photos/dads-1980.jpg" title="My dad likes to paint very detailed eggs. This is an old one - from 1980">
+                    <img src="images/egg-photos/dads-oldest.png" title="This one is the oldest dated egg">
+                    <img src="images/egg-photos/emily_1yr.png" title="All the kids join in - this one was decorated by a one year old!">
+                    <img src="images/egg-photos/goblet-egg.jpg" title="Inspired by a tiny china goblet">
+                    <img src="images/egg-photos/egg-words.jpg" title="If you can't paint, that's fine - just write!">
+                    <img src="images/egg-photos/denim-or-lace.png" title="Pick a fabric, any fabric...">
+                    <img src="images/egg-photos/Europe.png" title="Ah, that was such a good trip... Eggs are often a memory from the year before.">
+                    <img src="images/egg-photos/feeling-blue.png" title="My dad has a 'colour series' based on terrible colour puns">
+                    <img src="images/egg-photos/think-pink.png" title="Another from Dad's colour series">
+                    <img src="images/egg-photos/fish.jpg" title="It can be fun to add things to the egg - but it makes it hard to store!">
+                    <img src="images/egg-photos/pencil-hand.jpg" title="Lead pencil works too">
+                    <img src="images/egg-photos/hippy.png" title="Hippy egg, Ukrainian style">
+                    <img src="images/egg-photos/jap-chalet.png" title="My dad's trip to Japan - years later, my daughter went to live in this spot on exchange.">
+                    <img src="images/egg-photos/scrambles.png" title="Scrambled eggs are an important part of the day - what else are you going to do with all those insides?">
+                    <img src="images/egg-photos/mosaic.png" title="What do you do with broken eggs? Make them into a mosaic, of course!">
+                    </div>
+                </div>
+            </div>
+            </div>
+             <div id="section4" class="section">
+                 <div id="section4-content" class="section-content">
+                     <h2>Don't feel like painting? Try adding bits on instead!</h2>
+                     <img src="images/egg-photos/hedgehog.png" class="floatright grow"><p>Over the years, people have added many weird and wonderful extras on to their eggs. The egg that we think is the oldest (made before we started writing dates on them) was made by dripping melted wax from a candle onto the egg to make it into a hedgehog.</p>
+                     <p>The mosaic feature egg for this section was made by gluing on tiny pieces from eggs that had been dropped while being painted (a terrible event - the awful crunch as an egg hits the table brings a gasp to everyone's lips). As you can imagine, gluing on that many tiny bits took a long time - 4 years, in fact!</p>
+                     <p>Since then we have had hats, fishy fins and tails, string, fluffy chickens, foil, paper, alphabet pasta, knitting, crochet and even zippers. Most of the eggs get packed away neatly back into egg cartons after Easter, but the storage of eggs with extra add-ons can be quite a challenge. At least the crocheted ones have built-in padding!</p>
+                     <div id="add-ons">
+                         <img src="images/egg-photos/crochet-flowers.png" title="a reminder of the bouquet I'd crocheted that year for a friend's wedding">
+                         <img src="images/egg-photos/ferrero.png" title="Yes, there is a real egg in there!" >
+                         <img src="images/egg-photos/fluffy_chicken.png" title="traditional fluffy Easter chick, attached to an egg" >
+                         <img src="images/egg-photos/fish.png" title="Robbie's goldfish" >
+                         <img src="images/egg-photos/zipper.png" title="a rather more punk version of a crochet flower egg - made by Megan M" >
+                     </div>
+                    
+                 </div>
+             </div>
+        </div>
+     
+     <script>
+         (function() {
+             Galleria.loadTheme('files/galleria/themes/classic/galleria.classic.min.js')
+             Galleria.run('.galleria');
+         }());
+     </script>
+     <script src="files/eggsitement.js"></script>
+        </div>
+ </body>
+ </html>
